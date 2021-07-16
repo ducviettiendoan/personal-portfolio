@@ -164,13 +164,13 @@ export default function About() {
               <div>Email doan_d1@denison.edu</div>
             </div>
             <div className={classes.otherContactText}>Or</div>
-            <a className={classes.instaIconContainer} href="https://www.instagram.com/tduc.02/" target="_blank">
+            <a className={classes.instaIconContainer} href="https://www.instagram.com/tduc.02/" target="_blank" rel="noreferrer">
               <Image src={instagram} alt="Instagram" />
             </a>
-            <a className={classes.facebookIconContainer} href="https://www.facebook.com/profile.php?id=100028369741494" target="_blank">
+            <a className={classes.facebookIconContainer} href="https://www.facebook.com/profile.php?id=100028369741494" target="_blank" rel="noreferrer">
               <Image src={facebook} alt="Facebook" />
             </a>
-            <a className={classes.linkedinIconContainer} href="https://www.linkedin.com/in/duc-doan-2047511b4/" target="_blank">
+            <a className={classes.linkedinIconContainer} href="https://www.linkedin.com/in/duc-doan-2047511b4/" target="_blank" rel="noreferrer">
               <Image src={linkedin} alt="Linkedin" />
             </a>
           </div>

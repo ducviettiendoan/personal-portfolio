@@ -166,7 +166,7 @@ export default function Home() {
                   <div className={classes.projectName}>
                     PTE Magic - Sass English Platform
                   </div>
-                  <Button className={classes.viewPjButton}><a href="https://ptemagicpractice.com/" target="_blank" >View Project</a></Button>
+                  <Button className={classes.viewPjButton}><a href="https://ptemagicpractice.com/" target="_blank" rel="noreferrer" >View Project</a></Button>
                 </Card>
               </Grid>
               <Grid item sm={12} md={5}>
@@ -175,7 +175,7 @@ export default function Home() {
                   <div className={classes.projectName}>
                     PTE Magic - Sass English Platform
                   </div>
-                  <Button className={classes.viewPjButton}><a href="https://ptemagicpractice.com/" target="_blank" >View Project</a></Button>
+                  <Button className={classes.viewPjButton}><a href="https://ptemagicpractice.com/" target="_blank" rel="noreferrer">View Project</a></Button>
                 </Card>
               </Grid>
             </Grid>
