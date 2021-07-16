@@ -20,10 +20,5 @@
   "devDependencies": {
     "eslint": "7.30.0",
     "eslint-config-next": "11.0.1"
-  },
-  "extends": "next",
-  "rules": {
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off"
   }
 }
