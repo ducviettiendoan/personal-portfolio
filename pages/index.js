@@ -13,6 +13,8 @@ import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import bannerPortfolio from "../img/banner-portfolio.jpg";
 import pteMagic from "../img/pte-magic-preview.png";
+import Link from "next/link";
+
 
 const drawerWidth = "20%";
 
@@ -75,6 +77,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "20vh 6vw",
   },
   viewPjButton: {
+    width: "100%",
     border: "2px solid black",
     background: "white",
     "&:hover": {
@@ -93,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "12px",
     padding: "16px",
   },
-  pjHeader:{
+  pjHeader: {
     textAlign: 'center',
     color: "#151515",
     fontSize: "3vw",
@@ -159,19 +162,25 @@ export default function Home() {
           {/* Display Projects */}
           <div className={classes.projectBox}>
             <div className={classes.pjHeader}>My Projects</div>
-            <Grid container style={{display: "flex", justifyContent: "space-between"}}>
+            <Grid container style={{ display: "flex", justifyContent: "space-between" }}>
               <Grid item sm={12} md={5}>
                 <Card className={classes.pjCard}>
-                  <Image src={pteMagic} alt="pte-magic"/>
+                  <Image src={pteMagic} alt="pte-magic" />
                   <div className={classes.projectName}>
                     PTE Magic - Sass English Platform
                   </div>
-                  <Button className={classes.viewPjButton}><a href="https://ptemagicpractice.com/" target="_blank" rel="noreferrer" >View Project</a></Button>
+                  <Link href="/Projects/pte-magic">
+                    <Button className={classes.viewPjButton}>
+                      <div className={classes.section}>
+                        View Project
+                      </div>
+                    </Button>
+                  </Link>
                 </Card>
               </Grid>
               <Grid item sm={12} md={5}>
                 <Card className={classes.pjCard}>
-                  <Image src={pteMagic} alt="pte-magic"/>
+                  <Image src={pteMagic} alt="pte-magic" />
                   <div className={classes.projectName}>
                     PTE Magic - Sass English Platform
                   </div>

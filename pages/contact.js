@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "24px",
     fontfamily: "serif",
   },
-  otherContactText:{
+  otherContactText: {
     color: "#151515",
     fontSize: "4vw",
     fontWeight: 700,
@@ -82,16 +82,16 @@ const useStyles = makeStyles((theme) => ({
   facebookIconContainer: {
     marginRight: "16px",
     "&>div": {
-      height: "32px",
-      width: "32px",
-      borderRadius: "50%",  
+      height: "2.7vw",
+      width: "2.7vw",
+      borderRadius: "50%",
     },
   },
   instaIconContainer: {
     marginRight: "16px",
     "&>div": {
-      height: "38px",
-      width: "38px",
+      height: "3vw",
+      width: "3vw",
       borderRadius: "50%",
     },
     "&>div>img": {
@@ -100,14 +100,44 @@ const useStyles = makeStyles((theme) => ({
   },
   linkedinIconContainer: {
     "&>div": {
-      height: "42px",
-      width: "42px",
+      height: "3.2vw",
+      width: "3.2vw",
       borderRadius: "50%",
     },
     "&>div>img": {
-      top: "10px !important",
+      top: "10% !important",
     },
   },
+  facebookIconContainer: {
+    marginRight: "16px",
+    "&>div": {
+      height: "2.7vw",
+      width: "2.7vw",
+      borderRadius: "50%",
+    },
+  },
+  // instaIconContainerLarge: {
+  //   marginRight: "16px",
+  //   "&>div": {
+  //     height: "38px",
+  //     width: "38px",
+  //     borderRadius: "50%",
+  //   },
+  //   "&>div>img": {
+  //     top: "5px !important",
+  //   },
+  // },
+  // linkedinIconContainer: {
+  //   "&>div": {
+  //     height: "42px",
+  //     width: "42px",
+  //     borderRadius: "50%",
+  //   },
+  //   "&>div>img": {
+  //     top: "10px !important",
+  //   },
+  // },
+
 }));
 
 export default function About() {
@@ -164,15 +194,17 @@ export default function About() {
               <div>Email doan_d1@denison.edu</div>
             </div>
             <div className={classes.otherContactText}>Or</div>
-            <a className={classes.instaIconContainer} href="https://www.instagram.com/tduc.02/" target="_blank" rel="noreferrer">
-              <Image src={instagram} alt="Instagram" />
-            </a>
-            <a className={classes.facebookIconContainer} href="https://www.facebook.com/profile.php?id=100028369741494" target="_blank" rel="noreferrer">
-              <Image src={facebook} alt="Facebook" />
-            </a>
-            <a className={classes.linkedinIconContainer} href="https://www.linkedin.com/in/duc-doan-2047511b4/" target="_blank" rel="noreferrer">
-              <Image src={linkedin} alt="Linkedin" />
-            </a>
+            <div>
+              <a className={classes.instaIconContainer} href="https://www.instagram.com/tduc.02/" target="_blank" rel="noreferrer">
+                <Image src={instagram} alt="Instagram" />
+              </a>
+              <a className={classes.facebookIconContainer} href="https://www.facebook.com/profile.php?id=100028369741494" target="_blank" rel="noreferrer">
+                <Image src={facebook} alt="Facebook" />
+              </a>
+              <a className={classes.linkedinIconContainer} href="https://www.linkedin.com/in/duc-doan-2047511b4/" target="_blank" rel="noreferrer">
+                <Image src={linkedin} alt="Linkedin" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
