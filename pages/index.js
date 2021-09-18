@@ -13,6 +13,7 @@ import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import bannerPortfolio from "../img/banner-portfolio.jpg";
 import pteMagic from "../img/pte-magic-preview.png";
+import bidMax from "../img/bid_max_preview.png";
 import Link from "next/link";
 
 
@@ -91,10 +92,15 @@ const useStyles = makeStyles((theme) => ({
     color: "#3D3D3D",
     fontSize: "16px",
     padding: "32px 0px",
+    height: "35% !important",
   },
   pjCard: {
     borderRadius: "12px",
     padding: "16px",
+    height: "100% !important",
+    "&>div":{
+      height: "50%",
+    }
   },
   pjHeader: {
     textAlign: 'center',
@@ -102,6 +108,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "3vw",
     fontFamily: "serif",
     fontWeight: 700,
+  },
+  cardContainer:{
+    margin: "0 0 32px 0",
   }
 }));
 
@@ -163,9 +172,9 @@ export default function Home() {
           <div className={classes.projectBox}>
             <div className={classes.pjHeader}>My Projects</div>
             <Grid container style={{ display: "flex", justifyContent: "space-between" }}>
-              <Grid item sm={12} md={5}>
+              <Grid item sm={12} md={5} className={classes.cardContainer}>
                 <Card className={classes.pjCard}>
-                  <Image src={pteMagic} alt="pte-magic" />
+                  <Image src={pteMagic} alt="pte-magic" className={classes.imagePrview}/>
                   <div className={classes.projectName}>
                     PTE Magic - Sass English Platform
                   </div>
@@ -178,13 +187,19 @@ export default function Home() {
                   </Link>
                 </Card>
               </Grid>
-              <Grid item sm={12} md={5}>
+              <Grid item sm={12} md={5} className={classes.cardContainer}>
                 <Card className={classes.pjCard}>
-                  <Image src={pteMagic} alt="pte-magic" />
+                  <Image src={bidMax} alt="bid-max" className={classes.imagePrview}/>
                   <div className={classes.projectName}>
-                    PTE Magic - Sass English Platform
+                    Bid Max - Bidding Platform for construction machines
                   </div>
-                  <Button className={classes.viewPjButton}><a href="https://ptemagicpractice.com/" target="_blank" rel="noreferrer">View Project</a></Button>
+                  <Link href="/Projects/bid-max">
+                    <Button className={classes.viewPjButton}>
+                      <div className={classes.section}>
+                        View Project
+                      </div>
+                    </Button>
+                  </Link>
                 </Card>
               </Grid>
             </Grid>
