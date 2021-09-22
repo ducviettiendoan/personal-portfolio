@@ -133,7 +133,7 @@ export default function About() {
 
 
                     <div className={classes.linkToPte}>
-                        <a href="https://ptemagicpractice.com/" target="_blank" rel="noreferrer">View Project</a>
+                        <a href="https://ptemagic.com.au/" target="_blank" rel="noreferrer">View Project</a>
                     </div>
                     <div className={classes.sectionTitle}>
                         Description
