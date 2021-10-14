@@ -14,6 +14,8 @@ import Card from "@material-ui/core/Card";
 import bannerPortfolio from "../img/banner-portfolio.jpg";
 import pteMagic from "../img/pte-magic-preview.png";
 import bidMax from "../img/bid_max_preview.png";
+import posts from "../img/posts.png";
+import nauvusPreview from "../img/nauvus-preview.png";
 import Link from "next/link";
 
 
@@ -108,6 +110,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "3vw",
     fontFamily: "serif",
     fontWeight: 700,
+    marginBottom: "24px",
   },
   cardContainer:{
     margin: "0 0 32px 0",
@@ -194,6 +197,36 @@ export default function Home() {
                     Bid Max - Bidding Platform for construction machines
                   </div>
                   <Link href="/Projects/bid-max">
+                    <Button className={classes.viewPjButton}>
+                      <div className={classes.section}>
+                        View Project
+                      </div>
+                    </Button>
+                  </Link>
+                </Card>
+              </Grid>
+              <Grid item sm={12} md={5} className={classes.cardContainer}>
+                <Card className={classes.pjCard}>
+                  <Image src={nauvusPreview} alt="bid-max" className={classes.imagePrview}/>
+                  <div className={classes.projectName}>
+                    Nauvus - An IoT start up similar to Samsara
+                  </div>
+                  <Link href="/Projects/nauvus">
+                    <Button className={classes.viewPjButton}>
+                      <div className={classes.section}>
+                        View Project
+                      </div>
+                    </Button>
+                  </Link>
+                </Card>
+              </Grid>
+              <Grid item sm={12} md={5} className={classes.cardContainer}>
+                <Card className={classes.pjCard}>
+                  <Image src={posts} alt="bid-max" className={classes.imagePrview}/>
+                  <div className={classes.projectName}>
+                    MERN stack personal project - A posts web page
+                  </div>
+                  <Link href="/Projects/posts">
                     <Button className={classes.viewPjButton}>
                       <div className={classes.section}>
                         View Project

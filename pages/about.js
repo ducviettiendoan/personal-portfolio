@@ -152,9 +152,10 @@ export default function About() {
             >
               <div className={classes.myselfTitle}>About myself</div>
               <div>
-                I am a fullstack-web developer that have years of experience
-                with MERN stack and other web technologies. I also have a desire
-                to learn more on Flutter in mobile development.
+                I am a student that have 8 months of experience
+                with MERN stack and other web technologies. I have a desire
+                to learn more on both Frontend and Backend technologies to become
+                a Full-Stack engineer.
               </div>
               <div className={classes.affirmationTitle}>
                 Personal Affirmation
@@ -165,7 +166,10 @@ export default function About() {
                     Small changes compound to a huge difference
                   </p>
                 </div>
+                Add the technology you used in the past and things you're familiar with. 
+                School, Country, ...
               </div>
+
             </Grid>
           </Grid>
         </div>

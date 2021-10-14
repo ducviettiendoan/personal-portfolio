@@ -142,9 +142,9 @@ export default function About() {
                     </div>
                     <div className={classes.sectionTitle}>Role</div>
                     <ul className={classes.roleList}>
-                        <li>Work as a full-stack developer in a team of 5 members</li>
-                        <li>Discuss with customer and UI/UX designer for the final product</li>
-                        <li>Write, refactor, and test code casually with the team</li>
+                        <li>Work as a full-stack developer in a team of 5 members.</li>
+                        <li>Discuss with customer and UI/UX designer for the final product.</li>
+                        <li>Write, refactor, and test code casually with the team.</li>
                     </ul>
                     <div className={classes.sectionTitle}>Tasks</div>
                     <ul className={classes.taskList}>

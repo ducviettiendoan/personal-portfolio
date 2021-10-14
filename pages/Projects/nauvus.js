@@ -8,7 +8,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Image from "next/image";
-import pteMagic from "../../img/pte-magic-preview.png";
+import nauvus from "../../img/nauvus-preview.png";
 import Head from 'next/head';
 
 const useStyles = makeStyles((theme) => ({
@@ -128,38 +128,32 @@ export default function About() {
             />
             <div className={classes.content}>
                 {match && <div className={classes.toolbar} />}
-                <Image src={pteMagic} alt="PTE MAGIC preview" style={{ width: "100%" }} />
+                <Image src={nauvus} alt="PTE MAGIC preview" style={{ width: "100%" }} />
                 <div className={classes.bodyContent}>
-
-
                     <div className={classes.linkToPte}>
-                        <a href="https://ptemagic.com.au/" target="_blank" rel="noreferrer">View Project</a>
+                        <a href="https://github.com/ducviettiendoan/nauvus" target="_blank" rel="noreferrer">View Source Code</a>
                     </div>
                     <div className={classes.sectionTitle}>
                         Description
                     </div>
                     <div className={classes.descriptionDetail}>
-                        PTE Magic is an online Learning system with integration to AI (NLP).
-                        From the project starts until May/2021, it already reached 16,000+
-                        users with average 600-1000 users online per day.
+                        An online IoT management system for an American client.
                     </div>
                     <div className={classes.sectionTitle}>Role</div>
                     <ul className={classes.roleList}>
-                        <li>Work as a full-stack developer in a team of 6 members.</li>
+                        <li>Work as a frontend developer in a team of 5 members.</li>
                         <li>Discuss with customer and UI/UX designer for the final product.</li>
                         <li>Write, refactor, and test code casually with the team.</li>
                     </ul>
                     <div className={classes.sectionTitle}>Tasks</div>
                     <ul className={classes.taskList}>
-                        <li>Build frontend pages with NextJs, Redux Saga, and CSS.</li>
-                        <li>Connect frontend with server and to database by testing API.</li>
-                        <li>Created API endpoints with Java Spring Boot and PostGreSQL for blogging service.</li>
+                        <li>Build client pages with React, Redux Thunk, and CSS.</li>
+                        <li>Using Echart and Material UI to make components</li>
                     </ul>
                     <div className={classes.sectionTitle}>Technologies</div>
                     <ul className={classes.technologyList}>
-                        <li>NextJS, ReduxSaga, CSS, Material UI, StoryBook.</li>
-                        <li>Java SpringBoot, PostGreSQL</li>
-                        <li>EC2</li>
+                        <li>React, Redux Thunk, JavaScript, CSS</li>
+                        <li>Material UI, Echart</li>
                     </ul>
                 </div>
             </div>
