@@ -13,7 +13,11 @@ import denison from "../img/denison-student.png";
 import benit from "../img/benit-internship.png";
 import Image from "next/image";
 import ScrollAnimation from 'react-animate-on-scroll';
+import clsx from "clsx";
 // import "../components/Animation/animation.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -110,25 +114,6 @@ const useStyles = makeStyles((theme) => ({
   animation: {
     transition: "3s !important",
   },
-  bounceInRight: {
-    animationName: "bounceInRight",
-  },
-  "@keyframes bounceInRight": {
-    "0%": {
-      opacity: 0,
-      transform: "translateX(2000px)",
-    },
-    "60%": {
-      opacity: 1,
-      transform: "translateX(-30px)",
-    },
-    "80%": {
-      transform: "translateX(10px)",
-    },
-    "100%": {
-      transform: "translateX(0)",
-    },
-}
 }));
 
 export default function About() {
@@ -148,6 +133,9 @@ export default function About() {
   }
   console.log(mobileOpen);
 
+  React.useEffect(()=>{
+    Aos.init({duration: 3000})
+  },[])
   return (
     <div className={classes.root}>
       {match && (
@@ -192,7 +180,7 @@ export default function About() {
                     <Image src={denison} alt="Denison" className={classes.imageEdit} />
                   </ScrollAnimation>
                 </Grid>
-                <Grid item xs={8} className={classes.contentContainer}>
+                <Grid item xs={8} className={classes.contentContainer} data-aos="fade-left">
                   <h3>Denison University</h3>
                   <div>Class of 2024 - B.S in Computer Science</div>
                   <div>Granville, OH</div>
@@ -219,8 +207,7 @@ export default function About() {
                     <Image src={benit} alt="Benit" className={classes.imageEdit} />
                   </ScrollAnimation>
                 </Grid>
-                <Grid item xs={8} className={classes.contentContainer}>
-                  <div className={classes.bounceInRight}>
+                <Grid item xs={8} className={classes.contentContainer} data-aos="fade-left">
                     <h3>Denison University</h3>
                     <div>B.S in Computer Science</div>
                     <div>Granville, OH</div>
@@ -238,7 +225,6 @@ export default function About() {
                       to adversity. My internships at Google, Flipboard, and Pocket helped me discover my love for
                       building products that make people's lives better.
                     </div>
-                  </div>
                 </Grid>
               </Grid>
             </div>
