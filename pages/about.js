@@ -8,9 +8,12 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import town from "../img/town.jpg";
 import banner from "../img/banner.jpg";
+import denison from "../img/denison-student.png";
+import benit from "../img/benit-internship.png";
 import Image from "next/image";
+import ScrollAnimation from 'react-animate-on-scroll';
+// import "../components/Animation/animation.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
   gridItem: {
     padding: "0 16px !important",
-    "&>div":{
+    "&>div": {
       width: "100%",
     }
   },
@@ -58,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     lineHeight: "normal",
     marginBottom: "16px",
+    textAlign: "center",
   },
   affirmationTitle: {
     fontStyle: "italic",
@@ -77,9 +81,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "24px",
     textAlign: "center",
   },
-  banner:{
+  banner: {
     position: "relative",
-    "&>div":{
+    "&>div": {
       width: "100%",
     }
   },
@@ -92,7 +96,39 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "serif",
     fontWeight: 700,
     width: "90% !important",
-  }
+  },
+  pictureContainer: {
+    padding: "16px",
+  },
+  contentContainer: {
+    padding: "16px",
+    paddingTop: "0px"
+  },
+  imageEdit: {
+    borderRadius: "25px !important",
+  },
+  animation: {
+    transition: "3s !important",
+  },
+  bounceInRight: {
+    animationName: "bounceInRight",
+  },
+  "@keyframes bounceInRight": {
+    "0%": {
+      opacity: 0,
+      transform: "translateX(2000px)",
+    },
+    "60%": {
+      opacity: 1,
+      transform: "translateX(-30px)",
+    },
+    "80%": {
+      transform: "translateX(10px)",
+    },
+    "100%": {
+      transform: "translateX(0)",
+    },
+}
 }));
 
 export default function About() {
@@ -101,11 +137,17 @@ export default function About() {
   const match = useMediaQuery("(max-width:959px)");
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
+  const [open, set] = React.useState(false);
+
   const handleDrawerToggle = () => {
     setMobileOpen((prev) => !prev);
   };
 
+  const handleScrollAnimation = () => {
+    set(open => !open);
+  }
   console.log(mobileOpen);
+
   return (
     <div className={classes.root}>
       {match && (
@@ -134,44 +176,86 @@ export default function About() {
         {match && <div className={classes.toolbar} />}
         <div>
           <div className={classes.banner}>
-            <Image src={banner} alt="banner"/>
+            <Image src={banner} alt="banner" />
             <div className={classes.bannerTitle}>
               <div>My Passions &</div>
               <div>Personality</div>
             </div>
           </div>
-          <Grid container style={{ padding: "48px" }}>
-            <Grid item sm={12} md={5} className={classes.gridItem}>
-              <Image src={town} alt="Town" style={{width: "100%"}}/>
-            </Grid>
-            <Grid
-              item
-              sm={12}
-              md={7}
-              className={`${classes.bioContainer} ${classes.gridItem}`}
-            >
-              <div className={classes.myselfTitle}>About myself</div>
-              <div>
-                I am a student that have 8 months of experience
-                with MERN stack and other web technologies. I have a desire
-                to learn more on both Frontend and Backend technologies to become
-                a Full-Stack engineer.
-              </div>
-              <div className={classes.affirmationTitle}>
-                Personal Affirmation
-              </div>
-              <div className={classes.affirmationBox}>
-                <div className={classes.affirmationContainer}>
-                  <p className={classes.affirmationContent}>
-                    Small changes compound to a huge difference
-                  </p>
-                </div>
-                Add the technology you used in the past and things you're familiar with. 
-                School, Country, ...
+          <div container style={{ padding: "10%" }}>
+            <div className={classes.myselfTitle}>My journey</div>
+            {/* College + Benit */}
+            <div>
+              <Grid container>
+                <Grid item xs={4} className={classes.pictureContainer}>
+                  <ScrollAnimation animateIn="fadeInLeft" className={classes.animation}>
+                    <Image src={denison} alt="Denison" className={classes.imageEdit} />
+                  </ScrollAnimation>
+                </Grid>
+                <Grid item xs={8} className={classes.contentContainer}>
+                  <h3>Denison University</h3>
+                  <div>Class of 2024 - B.S in Computer Science</div>
+                  <div>Granville, OH</div>
+                  <div>
+                    Duke presented unprecedented scale and diversity of opportunity.
+                    My four years of phenomenal professors across the disciplines
+                    pushed me to expand, challenge, and adjust my worldview.
+                  </div>
+                  <div>
+                    My experience dancing with DefMo showed me the power of empathetic leadership and
+                    expanded my artistic comfort zone. My tenure throwing major, campus-wide events validated
+                    that quality stems from attention to detail. My junior fall semester abroad at London's UCL
+                    humbled me to explore my place in the world. My engagement in Duke's tech & innovation initiatives
+                    exercised my creative muscle, sparked my obsession with design, and strengthened my tolerance
+                    to adversity. My internships at Google, Flipboard, and Pocket helped me discover my love for
+                    building products that make people's lives better.
+                  </div>
+                </Grid>
+              </Grid>
+
+              <Grid container>
+                <Grid item xs={4} className={classes.pictureContainer}>
+                  <ScrollAnimation animateIn="fadeInLeft" className={classes.animation}>
+                    <Image src={benit} alt="Benit" className={classes.imageEdit} />
+                  </ScrollAnimation>
+                </Grid>
+                <Grid item xs={8} className={classes.contentContainer}>
+                  <div className={classes.bounceInRight}>
+                    <h3>Denison University</h3>
+                    <div>B.S in Computer Science</div>
+                    <div>Granville, OH</div>
+                    <div>
+                      Duke presented unprecedented scale and diversity of opportunity.
+                      My four years of phenomenal professors across the disciplines
+                      pushed me to expand, challenge, and adjust my worldview.
+                    </div>
+                    <div>
+                      My experience dancing with DefMo showed me the power of empathetic leadership and
+                      expanded my artistic comfort zone. My tenure throwing major, campus-wide events validated
+                      that quality stems from attention to detail. My junior fall semester abroad at London's UCL
+                      humbled me to explore my place in the world. My engagement in Duke's tech & innovation initiatives
+                      exercised my creative muscle, sparked my obsession with design, and strengthened my tolerance
+                      to adversity. My internships at Google, Flipboard, and Pocket helped me discover my love for
+                      building products that make people's lives better.
+                    </div>
+                  </div>
+                </Grid>
+              </Grid>
+            </div>
+            <div>
+            </div>
+            <div className={classes.affirmationTitle}>
+              Personal Affirmation
+            </div>
+            <div className={classes.affirmationBox}>
+              <div className={classes.affirmationContainer}>
+                <p className={classes.affirmationContent}>
+                  Small changes compound to a huge difference
+                </p>
               </div>
 
-            </Grid>
-          </Grid>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 300,
   },
   projectBox: {
-    padding: "20vh 6vw",
+    padding: "12vh 6vw",
   },
   viewPjButton: {
     width: "100%",
@@ -165,10 +165,11 @@ export default function Home() {
           <Card className={classes.introBox}>
             <div className={classes.introTitle}>I am a dedicated developer</div>
             <div className={classes.introContent}>
-              Being that I've based my business off of the Squarespace platform,
-              there's nothing I can't handle. Below you'll find a selection of
-              some of my most recent Squarespace projects that showcase the type
-              of clients I work closely with.
+              Worked as a Junior Web Developer with an impressive background of 
+              front-end development. Exprienced server side technologies and would 
+              love to become a full-stack engineer. Below you'll find a selection
+              of some of my most recent projects that showcase the type
+              of website I work closely with.
             </div>
           </Card>
           {/* Display Projects */}
