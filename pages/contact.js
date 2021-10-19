@@ -190,7 +190,7 @@ export default function About() {
               Or reach out to me directly.
             </div>
             <div className={classes.contactNumber}>
-              <div>Call 84-3750-8785 Mon-Fri: 9am - 5pm EST</div>
+              <div>Call 740-405-9323</div>
               <div>Email doan_d1@denison.edu</div>
             </div>
             <div className={classes.otherContactText}>Or</div>
@@ -201,7 +201,7 @@ export default function About() {
               <a className={classes.facebookIconContainer} href="https://www.facebook.com/profile.php?id=100028369741494" target="_blank" rel="noreferrer">
                 <Image src={facebook} alt="Facebook" />
               </a>
-              <a className={classes.linkedinIconContainer} href="https://www.linkedin.com/in/duc-doan-2047511b4/" target="_blank" rel="noreferrer">
+              <a className={classes.linkedinIconContainer} href="https://www.linkedin.com/in/ducviettiendoan/" target="_blank" rel="noreferrer">
                 <Image src={linkedin} alt="Linkedin" />
               </a>
             </div>

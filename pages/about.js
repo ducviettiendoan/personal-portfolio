@@ -10,11 +10,10 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import banner from "../img/banner.jpg";
 import denison from "../img/denison-student.png";
+import ducdoan from "../img/duc_doan_about.jpg";
 import benit from "../img/benit-internship.png";
 import Image from "next/image";
 import ScrollAnimation from 'react-animate-on-scroll';
-import clsx from "clsx";
-// import "../components/Animation/animation.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -164,9 +163,10 @@ export default function About() {
         {match && <div className={classes.toolbar} />}
         <div>
           <div className={classes.banner}>
-            <Image src={banner} alt="banner" />
+            <Image src={ducdoan} alt="banner" />
             <div className={classes.bannerTitle}>
-              <div>My Passions &</div>
+              <div>My Passions</div>
+              <div>and</div>
               <div>Personality</div>
             </div>
           </div>
@@ -230,10 +230,10 @@ export default function About() {
             </div>
             <div>
             </div>
-            <div className={classes.affirmationTitle}>
+            <div className={classes.affirmationTitle} data-aos="fade-right">
               Personal Affirmation
             </div>
-            <div className={classes.affirmationBox}>
+            <div className={classes.affirmationBox} data-aos="slide-up">
               <div className={classes.affirmationContainer}>
                 <p className={classes.affirmationContent}>
                   Small changes compound to a huge difference

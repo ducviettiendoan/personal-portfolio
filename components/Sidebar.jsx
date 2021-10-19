@@ -8,7 +8,6 @@ import PermPhoneMsgIcon from "@material-ui/icons/PermPhoneMsg";
 import PersonIcon from "@material-ui/icons/Person";
 import DescriptionIcon from "@material-ui/icons/Description";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Link from "next/link";
 
 const drawerWidth = "20%";
@@ -118,40 +117,40 @@ function Sidebar(props) {
         <div className={classes.portfolioNameMark}></div>
       </div>
       <List>
-        <ListItem button key={"portfolio"} className={classes.navSection}>
-          <div>
-            <Link href="/">
+        <Link href="/">
+          <ListItem button key={"portfolio"} className={classes.navSection}>
+            <div>
               <div className={classes.section}>
                 <DescriptionIcon />
                 <a className={classes.smallMarginLeft}>Portfolio</a>
               </div>
-            </Link>
-            <div className={classes.underline} />
-          </div>
-        </ListItem>
-        <ListItem button key={"about"} className={classes.navSection}>
-          <div>
-            <Link href="/about">
+
+              <div className={classes.underline} />
+            </div>
+          </ListItem>
+        </Link>
+        <Link href="/about">
+          <ListItem button key={"about"} className={classes.navSection}>
+            <div>
               <div className={classes.section}>
                 <PersonIcon />
-
                 <a className={classes.smallMarginLeft}>About</a>
               </div>
-            </Link>
-            <div className={classes.underline} />
-          </div>
-        </ListItem>
-        <ListItem button key={"contact"} className={classes.navSection}>
-          <div>
-            <Link href="/contact">
+              <div className={classes.underline} />
+            </div>
+          </ListItem>
+        </Link>
+        <Link href="/contact">
+          <ListItem button key={"contact"} className={classes.navSection}>
+            <div>
               <div className={classes.section}>
                 <PermPhoneMsgIcon />
                 <a className={classes.smallMarginLeft}>Contact</a>
               </div>
-            </Link>
-            <div className={classes.underline} />
-          </div>
-        </ListItem>
+              <div className={classes.underline} />
+            </div>
+          </ListItem>
+        </Link>
       </List>
     </div>
   );
