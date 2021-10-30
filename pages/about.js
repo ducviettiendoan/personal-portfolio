@@ -2,13 +2,7 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import AppBar from "@material-ui/core/AppBar";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import banner from "../img/banner.jpg";
 import denison from "../img/denison-student.png";
 import ducdoan from "../img/duc_doan_about.jpg";
 import benit from "../img/benit-internship.png";
@@ -16,6 +10,7 @@ import Image from "next/image";
 import ScrollAnimation from 'react-animate-on-scroll';
 import Aos from "aos";
 import "aos/dist/aos.css";
+import CustomAppbar from "../components/CustomAppbar";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -138,22 +133,7 @@ export default function About() {
   return (
     <div className={classes.root}>
       {match && (
-        <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              className={classes.menuButton}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" noWrap>
-              Responsive drawer
-            </Typography>
-          </Toolbar>
-        </AppBar>
+        <CustomAppbar handleDrawerToggle = {handleDrawerToggle}/>
       )}
       <Sidebar
         mobileOpen={mobileOpen}

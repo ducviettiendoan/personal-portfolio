@@ -2,16 +2,12 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import AppBar from "@material-ui/core/AppBar";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import Image from "next/image";
 import portfolioContact from "../img/portfolio-contact.jpg";
 import instagram from "../img/instagram-icon.png";
 import facebook from "../img/facebook-icon.png";
 import linkedin from "../img/linkedin-icon.png";
+import CustomAppbar from "../components/CustomAppbar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -116,27 +112,6 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: "50%",
     },
   },
-  // instaIconContainerLarge: {
-  //   marginRight: "16px",
-  //   "&>div": {
-  //     height: "38px",
-  //     width: "38px",
-  //     borderRadius: "50%",
-  //   },
-  //   "&>div>img": {
-  //     top: "5px !important",
-  //   },
-  // },
-  // linkedinIconContainer: {
-  //   "&>div": {
-  //     height: "42px",
-  //     width: "42px",
-  //     borderRadius: "50%",
-  //   },
-  //   "&>div>img": {
-  //     top: "10px !important",
-  //   },
-  // },
 
 }));
 
@@ -154,22 +129,7 @@ export default function About() {
   return (
     <div className={classes.root}>
       {match && (
-        <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              className={classes.menuButton}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" noWrap>
-              Responsive drawer
-            </Typography>
-          </Toolbar>
-        </AppBar>
+        <CustomAppbar handleDrawerToggle = {handleDrawerToggle}/>
       )}
       <Sidebar
         mobileOpen={mobileOpen}
