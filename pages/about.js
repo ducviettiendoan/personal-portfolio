@@ -108,6 +108,10 @@ const useStyles = makeStyles((theme) => ({
   animation: {
     transition: "3s !important",
   },
+  paragraphSpace:{
+    marginTop: "24px",
+    marginBottom: "24px",
+  }
 }));
 
 export default function About() {
@@ -155,55 +159,52 @@ export default function About() {
             {/* College + Benit */}
             <div>
               <Grid container>
-                <Grid item xs={4} className={classes.pictureContainer}>
+                <Grid item md ={12  } lg = {5} className={classes.pictureContainer}>
                   <ScrollAnimation animateIn="fadeInLeft" className={classes.animation}>
                     <Image src={denison} alt="Denison" className={classes.imageEdit} />
                   </ScrollAnimation>
                 </Grid>
-                <Grid item xs={8} className={classes.contentContainer} data-aos="fade-left">
+                <Grid item md = {12} lg={7} className={classes.contentContainer} data-aos="fade-left">
                   <h3>Denison University</h3>
                   <div>Class of 2024 - B.S in Computer Science</div>
                   <div>Granville, OH</div>
-                  <div>
-                    Duke presented unprecedented scale and diversity of opportunity.
-                    My four years of phenomenal professors across the disciplines
+                  <div className={classes.paragraphSpace}>
+                    Denison presented unprecedented scale and diversity of opportunity.
+                    My four years of phenomenal professors across all departments
                     pushed me to expand, challenge, and adjust my worldview.
                   </div>
                   <div>
-                    My experience dancing with DefMo showed me the power of empathetic leadership and
-                    expanded my artistic comfort zone. My tenure throwing major, campus-wide events validated
-                    that quality stems from attention to detail. My junior fall semester abroad at London's UCL
-                    humbled me to explore my place in the world. My engagement in Duke's tech & innovation initiatives
-                    exercised my creative muscle, sparked my obsession with design, and strengthened my tolerance
-                    to adversity. My internships at Google, Flipboard, and Pocket helped me discover my love for
-                    building products that make people's lives better.
+                    At Denison, I have an opportunity to learn fundametal and advanced knowledge about Computer Science such as:
+                    Introduction to CS, Algorithm and Data Structure, Algorithm Design and Analysis. Additionally, I also work as a 
+                    Service Desk Assistant on campus. Being a part of Denison's IT Service helps me enhance my computer troubleshooting 
+                    and customer service skill. 
                   </div>
                 </Grid>
               </Grid>
 
               <Grid container>
-                <Grid item xs={4} className={classes.pictureContainer}>
+                <Grid item md = {12} lg={5} className={classes.pictureContainer}>
                   <ScrollAnimation animateIn="fadeInLeft" className={classes.animation}>
                     <Image src={benit} alt="Benit" className={classes.imageEdit} />
                   </ScrollAnimation>
                 </Grid>
-                <Grid item xs={8} className={classes.contentContainer} data-aos="fade-left">
-                    <h3>Denison University</h3>
-                    <div>B.S in Computer Science</div>
-                    <div>Granville, OH</div>
-                    <div>
-                      Duke presented unprecedented scale and diversity of opportunity.
-                      My four years of phenomenal professors across the disciplines
-                      pushed me to expand, challenge, and adjust my worldview.
+                <Grid item md={12} lg={7} className={classes.contentContainer} data-aos="fade-left">
+                    <h3>Benit Academy</h3>
+                    <div>Junior Web developer</div>
+                    <div>Hanoi, Vietnam</div>
+                    <div className={classes.paragraphSpace}>
+                      Benit mission is to escort all IT learners in education and employment in Australia, the USA, 
+                      and other countries. We assist our members in career orientation, skills training, and enhancement 
+                      as well as expanding their professional social circles.
                     </div>
                     <div>
-                      My experience dancing with DefMo showed me the power of empathetic leadership and
-                      expanded my artistic comfort zone. My tenure throwing major, campus-wide events validated
-                      that quality stems from attention to detail. My junior fall semester abroad at London's UCL
-                      humbled me to explore my place in the world. My engagement in Duke's tech & innovation initiatives
-                      exercised my creative muscle, sparked my obsession with design, and strengthened my tolerance
-                      to adversity. My internships at Google, Flipboard, and Pocket helped me discover my love for
-                      building products that make people's lives better.
+                      My experience with Benit showed me the power of self-learning and team-work. 
+                      By completed a Codecademy Full-stack engineer certificate, I was able to gradually join 
+                      in some team projects (mainly commercial projects). While working with the team, I improved my 
+                      programing skill and gained a lot of experience from knowledge to tips. With the help of my teammates
+                      and my mentor, I built several front-end pages with React, Redux and also experienced NodeJs, Express,
+                      and Java SpringBoot. Furthermore, I was trained to work with Git and some fundametal commands to manage
+                      the team project.
                     </div>
                 </Grid>
               </Grid>
