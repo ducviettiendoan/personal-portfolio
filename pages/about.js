@@ -188,7 +188,7 @@ export default function About() {
                     <Image src={benit} alt="Benit" className={classes.imageEdit} />
                   </ScrollAnimation>
                 </Grid>
-                <Grid item md={12} lg={7} className={classes.contentContainer} data-aos="fade-left">
+                <Grid item md={12} lg={7  } className={classes.contentContainer} data-aos="fade-left">
                     <h3>Benit Academy</h3>
                     <div>Junior Web developer</div>
                     <div>Hanoi, Vietnam</div>

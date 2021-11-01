@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Image from "next/image";
-import portfolioContact from "../img/portfolio-contact.jpg";
+import contact from "../img/contact_me.jpg";
 import instagram from "../img/instagram-icon.png";
 import facebook from "../img/facebook-icon.png";
 import linkedin from "../img/linkedin-icon.png";
@@ -139,7 +139,7 @@ export default function About() {
         {match && <div className={classes.toolbar} />}
         <div>
           <div className={classes.banner}>
-            <Image src={portfolioContact} alt="Contact" />
+            <Image src={contact} alt="Contact" />
             <div className={classes.bannerTitle}>
               <div>Connect with</div>
               <div>Me today</div>

@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 import Image from "next/image";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
-import bannerPortfolio from "../img/banner-portfolio.jpg";
+import portfolio from "../img/portfolio.jpg";
 import pteMagic from "../img/pte-magic-preview.png";
 import bidMax from "../img/bid_max_preview.png";
 import posts from "../img/posts.png";
@@ -148,9 +148,9 @@ export default function Home() {
         {match && <div className={classes.toolbar} />}
         <div>
           <div className={classes.banner}>
-            <Image src={bannerPortfolio} alt="banner" />
+            <Image src={portfolio} alt="banner" />
             <div className={classes.bannerTitle}>
-              <div>Benit</div>
+              <div>Duc Doan</div>
               <div>Portfolio</div>
             </div>
           </div>
