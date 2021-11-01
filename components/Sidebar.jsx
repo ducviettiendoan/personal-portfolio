@@ -67,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
   },
   smallMarginLeft: {
     marginLeft: "8px",
+    // fontSize: "1.2vw",
   },
   section: {
     display: "flex",

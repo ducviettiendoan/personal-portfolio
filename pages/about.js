@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Grid from "@material-ui/core/Grid";
-import denison from "../img/denison-student.png";
+import denison from "../img/denison.jpg";
 import ducdoan from "../img/duc_doan_about.jpg";
 import benit from "../img/benit-internship.png";
 import Image from "next/image";
@@ -159,7 +159,7 @@ export default function About() {
             {/* College + Benit */}
             <div>
               <Grid container>
-                <Grid item md ={12  } lg = {5} className={classes.pictureContainer}>
+                <Grid item md ={12} lg = {5} className={classes.pictureContainer}>
                   <ScrollAnimation animateIn="fadeInLeft" className={classes.animation}>
                     <Image src={denison} alt="Denison" className={classes.imageEdit} />
                   </ScrollAnimation>
