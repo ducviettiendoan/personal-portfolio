@@ -8,6 +8,7 @@ import instagram from "../img/instagram-icon.png";
 import facebook from "../img/facebook-icon.png";
 import linkedin from "../img/linkedin-icon.png";
 import CustomAppbar from "../components/CustomAppbar";
+import { SocialIcon } from 'react-social-icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -70,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     fontfamily: "serif",
   },
   contactNumber: {
-    fontSize: "2.5vw",
+    fontSize: "2.7vw",
     color: "#121212",
     fontWeight: 300,
     marginBottom: "24px",
@@ -84,7 +85,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   instaIconContainer: {
-    marginRight: "16px",
     "&>div": {
       height: "3vw",
       width: "3vw",
@@ -95,6 +95,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   linkedinIconContainer: {
+    marginRight: "16px",
     "&>div": {
       height: "3.2vw",
       width: "3.2vw",
@@ -129,7 +130,7 @@ export default function About() {
   return (
     <div className={classes.root}>
       {match && (
-        <CustomAppbar handleDrawerToggle = {handleDrawerToggle}/>
+        <CustomAppbar handleDrawerToggle={handleDrawerToggle} />
       )}
       <Sidebar
         mobileOpen={mobileOpen}
@@ -151,18 +152,18 @@ export default function About() {
             </div>
             <div className={classes.contactNumber}>
               <div>Call 740-405-9323</div>
-              <div>Email doan_d1@denison.edu</div>
+              <div>Email ducviettiendoan@gmail.com</div>
             </div>
             <div className={classes.otherContactText}>Or</div>
             <div>
-              <a className={classes.instaIconContainer} href="https://www.instagram.com/tduc.02/" target="_blank" rel="noreferrer">
-                <Image src={instagram} alt="Instagram" />
+              <a className={classes.linkedinIconContainer} href="https://www.linkedin.com/in/ducviettiendoan/" target="_blank" rel="noreferrer">
+                <SocialIcon url="https://linkedin.com/jaketrent" />
               </a>
               <a className={classes.facebookIconContainer} href="https://www.facebook.com/profile.php?id=100028369741494" target="_blank" rel="noreferrer">
-                <Image src={facebook} alt="Facebook" />
+                <SocialIcon url="https://facebook.com/jaketrent" />
               </a>
-              <a className={classes.linkedinIconContainer} href="https://www.linkedin.com/in/ducviettiendoan/" target="_blank" rel="noreferrer">
-                <Image src={linkedin} alt="Linkedin" />
+              <a className={classes.instaIconContainer} href="https://www.instagram.com/tduc.02/" target="_blank" rel="noreferrer">
+                <SocialIcon url="https://instagram.com/jaketrent" />
               </a>
             </div>
           </div>
