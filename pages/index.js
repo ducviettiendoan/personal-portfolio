@@ -11,8 +11,10 @@ import pteMagic from "../img/pte-magic-preview.png";
 import bidMax from "../img/bid_max_preview.png";
 import posts from "../img/posts.png";
 import nauvusPreview from "../img/nauvus-preview.png";
+import flaskMvc from "../img/flaskMvc.png"
 import Link from "next/link";
 import CustomAppbar from "../components/CustomAppbar";
+import { SentimentVerySatisfied } from "@material-ui/icons";
 
 
 const drawerWidth = "20%";
@@ -118,6 +120,10 @@ const useStyles = makeStyles((theme) => ({
   },
   imagePreviewRange: {
     minWidth: "80% !important",
+  },
+  description: {
+    fontFamily: "san-serif",
+    fontSize: 14,
   }
 }));
 
@@ -220,6 +226,25 @@ export default function Home() {
                     MERN stack personal project - A posts web page
                   </div>
                   <Link href="/Projects/posts">
+                    <Button className={classes.viewPjButton}>
+                      <div className={classes.section}>
+                        View Project
+                      </div>
+                    </Button>
+                  </Link>
+                </Card>
+              </Grid>
+              <Grid item sm={12} md={5} className={classes.cardContainer}>
+                <Card className={classes.pjCard}>
+                  {match && minRangeImg ? <Image src={flaskMvc} alt="posts-page" className={classes.imagePreviewRange} /> : <Image src={flaskMvc} alt="posts-page" className={classes.imagePreview} />}
+                  <div className={classes.projectName}>
+                    <div style={{ marginBottom: "12px" }}>Flask MVC API Testing</div>
+                    <div className={classes.description}>
+                      A simple table using MVC API method to accomplish 4 fundamental HTTP requests.
+                    </div>
+                    <div className={classes.description}>Technologies: Flask HTML and CSS</div>
+                  </div>
+                  <Link href="https://ducdoanflaskmvc.herokuapp.com">
                     <Button className={classes.viewPjButton}>
                       <div className={classes.section}>
                         View Project
