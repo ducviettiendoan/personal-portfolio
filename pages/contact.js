@@ -157,13 +157,13 @@ export default function About() {
             <div className={classes.otherContactText}>Or</div>
             <div>
               <a className={classes.linkedinIconContainer} href="https://www.linkedin.com/in/ducviettiendoan/" target="_blank" rel="noreferrer">
-                <SocialIcon url="https://linkedin.com/jaketrent" />
+                <SocialIcon url="https://www.linkedin.com/in/ducviettiendoan/" />
               </a>
               <a className={classes.facebookIconContainer} href="https://www.facebook.com/profile.php?id=100028369741494" target="_blank" rel="noreferrer">
-                <SocialIcon url="https://facebook.com/jaketrent" />
+                <SocialIcon url="https://www.facebook.com/profile.php?id=100028369741494" />
               </a>
               <a className={classes.instaIconContainer} href="https://www.instagram.com/tduc.02/" target="_blank" rel="noreferrer">
-                <SocialIcon url="https://instagram.com/jaketrent" />
+                <SocialIcon url="https://www.instagram.com/tduc.02/" />
               </a>
             </div>
           </div>
