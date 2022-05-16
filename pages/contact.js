@@ -4,9 +4,6 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Image from "next/image";
 import contact from "../img/contact_me.jpg";
-import instagram from "../img/instagram-icon.png";
-import facebook from "../img/facebook-icon.png";
-import linkedin from "../img/linkedin-icon.png";
 import CustomAppbar from "../components/CustomAppbar";
 import { SocialIcon } from 'react-social-icons';
 

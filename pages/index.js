@@ -11,6 +11,7 @@ import pteMagic from "../img/pte-magic-preview.png";
 import bidMax from "../img/bid_max_preview.png";
 import posts from "../img/posts.png";
 import nauvusPreview from "../img/nauvus-preview.png";
+import nasaScrap from "../img/nasa-scrapping.png"
 import flaskMvc from "../img/flaskMvc.png"
 import Link from "next/link";
 import CustomAppbar from "../components/CustomAppbar";
@@ -245,6 +246,26 @@ export default function Home() {
                     <div className={classes.description}>Technologies: Flask HTML and CSS</div>
                   </div>
                   <Link href="https://ducdoanflaskmvc.herokuapp.com">
+                    <Button className={classes.viewPjButton}>
+                      <div className={classes.section}>
+                        View Project
+                      </div>
+                    </Button>
+                  </Link>
+                </Card>
+              </Grid>
+              <Grid item sm={12} md={5} className={classes.cardContainer}>
+                <Card className={classes.pjCard}>
+                  {match && minRangeImg ? <Image src={nasaScrap} alt="nasa" className={classes.imagePreviewRange} /> : <Image src={nasaScrap} alt="nasa" className={classes.imagePreview} />}
+                  <div className={classes.projectName}>
+                    <div style={{ marginBottom: "12px" }}> Nasa Web Scrapping</div>
+                    <div className={classes.description}>
+                      A small project scrapping Nasa Web Image Api. Using an API endpoint, this website displays
+                      all the Spacetagram images captured by Nasa 
+                    </div>
+                    <div className={classes.description}>Technologies: ReactJs, Redux Thunk, CSS</div>
+                  </div>
+                  <Link href="https://ducviettiendoan.github.io/nasa-scrapping/">
                     <Button className={classes.viewPjButton}>
                       <div className={classes.section}>
                         View Project
