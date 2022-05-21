@@ -15,7 +15,6 @@ import nasaScrap from "../img/nasa-scrapping.png"
 import flaskMvc from "../img/flaskMvc.png"
 import Link from "next/link";
 import CustomAppbar from "../components/CustomAppbar";
-import { SentimentVerySatisfied } from "@material-ui/icons";
 
 
 const drawerWidth = "20%";
@@ -168,7 +167,7 @@ export default function Home() {
               front-end development. Exprienced server side technologies and would
               love to become a full-stack engineer. Below you'll find a selection
               of some of my most recent projects that showcase the type
-              of website I work closely with.
+              of website and web app I work closely with.
             </div>
           </Card>
           {/* Display Projects */}
@@ -187,7 +186,7 @@ export default function Home() {
                         View Project
                       </div>
                     </Button>
-                  </Link>
+                  </Link>``
                 </Card>
               </Grid>
               <Grid item sm={12} md={5} className={classes.cardContainer}>
