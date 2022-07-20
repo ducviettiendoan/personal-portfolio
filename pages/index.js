@@ -13,6 +13,7 @@ import posts from "../img/posts.png";
 import nauvusPreview from "../img/nauvus-preview.png";
 import nasaScrap from "../img/nasa-scrapping.png"
 import flaskMvc from "../img/flaskMvc.png"
+import chatApp from "../img/chat-app.png";
 import Link from "next/link";
 import CustomAppbar from "../components/CustomAppbar";
 
@@ -273,6 +274,21 @@ export default function Home() {
                   </Link>
                 </Card>
               </Grid>
+              <Grid item sm={12} md={5} className={classes.cardContainer}>
+                  <Card className={classes.pjCard}>
+                    {match && minRangeImg ? <Image src={chatApp} alt="posts-page" className={classes.imagePreviewRange} /> : <Image src={chatApp} alt="posts-page" className={classes.imagePreview} />}
+                    <div className={classes.projectName}>
+                      A customed chat app 
+                    </div>
+                    <Link href="/Projects/chat-app">
+                      <Button className={classes.viewPjButton}>
+                        <div className={classes.section}>
+                          View Project
+                        </div>
+                      </Button>
+                    </Link>
+                  </Card>
+                </Grid>
             </Grid>
           </div>
         </div>
