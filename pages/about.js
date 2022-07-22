@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import denison from "../img/denison.jpg";
 import ducdoan from "../img/duc_doan_about.jpg";
 import benit from "../img/benit-internship.png";
+import scienceLogic from "../img/science_logic.jpg"
 import Image from "next/image";
 import ScrollAnimation from 'react-animate-on-scroll';
 import Aos from "aos";
@@ -105,6 +106,10 @@ const useStyles = makeStyles((theme) => ({
   imageEdit: {
     borderRadius: "25px !important",
   },
+  // scienceLogicImage:{
+  //   minHeight: "75% !important",
+  //   minWidth: "75% !important",
+  // },
   animation: {
     transition: "3s !important",
   },
@@ -132,7 +137,7 @@ export default function About() {
   console.log(mobileOpen);
 
   React.useEffect(()=>{
-    Aos.init({duration: 3000})
+    Aos.init({duration: 3000, once: "true"})
   },[])
   return (
     <div className={classes.root}>
@@ -156,7 +161,7 @@ export default function About() {
           </div>
           <div container style={{ padding: "10%" }}>
             <div className={classes.myselfTitle}>My journey</div>
-            {/* College + Benit */}
+            {/* College + Benit + ScienceLogic */}
             <div>
               <Grid container>
                 <Grid item md ={12} lg = {5} className={classes.pictureContainer}>
@@ -192,6 +197,34 @@ export default function About() {
                     <h3>Benit Academy</h3>
                     <div>Junior Web developer</div>
                     <div>Hanoi, Vietnam</div>
+                    <div className={classes.paragraphSpace}>
+                      Benit mission is to escort all IT learners in education and employment in Australia, the USA, 
+                      and other countries. We assist our members in career orientation, skills training, and enhancement 
+                      as well as expanding their professional social circles.
+                    </div>
+                    <div>
+                      My experience with Benit showed me the power of self-learning and team-work. 
+                      By completed a Codecademy Full-stack engineer certificate, I was able to gradually join 
+                      in some team projects (mainly commercial projects). While working with the team, I improved my 
+                      programing skill and gained a lot of experience from knowledge to tips. With the help of my teammates
+                      and my mentor, I built several front-end pages with React, Redux and also experienced NodeJs, Express,
+                      and Java SpringBoot. Furthermore, I was trained to work with Git and some fundametal commands to manage
+                      the team project.
+                    </div>
+                </Grid>
+              </Grid>
+
+
+              <Grid container>
+                <Grid item md = {12} lg={5} className={classes.pictureContainer}>
+                  <ScrollAnimation animateIn="fadeInLeft" className={classes.animation}>
+                    <Image src={scienceLogic} alt="Science Logic" className={`${classes.imageEdit} ${classes.scienceLogicImage}`}/>
+                  </ScrollAnimation>
+                </Grid>
+                <Grid item md={12} lg={7} className={classes.contentContainer} data-aos="fade-left">
+                    <h3>ScienceLogic Inc</h3>
+                    <div>Solution Engineering</div>
+                    <div>Reston, Virginia</div>
                     <div className={classes.paragraphSpace}>
                       Benit mission is to escort all IT learners in education and employment in Australia, the USA, 
                       and other countries. We assist our members in career orientation, skills training, and enhancement 

@@ -9,6 +9,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import DescriptionIcon from "@material-ui/icons/Description";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Link from "next/link";
+import { NoEncryptionTwoTone } from "@material-ui/icons";
 
 const drawerWidth = "20%";
 
@@ -58,12 +59,21 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    color: "black",
     "&:hover": {
       background: "white",
       "&>div>div:nth-of-type(2)": {
         width: "100%",
+        color: "black"
+      },
+      "&>div>div:nth-of-type(1)>a": {
+        color: "black"
       },
     },
+  },
+  customLinkTag:{
+    textDecoration: "none",
+    color: "black",
   },
   smallMarginLeft: {
     marginLeft: "8px",
@@ -72,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
   section: {
     display: "flex",
   },
+
   underline: {
     width: "0%",
     height: "2px",
@@ -123,7 +134,7 @@ function Sidebar(props) {
             <div>
               <div className={classes.section}>
                 <DescriptionIcon />
-                <a className={classes.smallMarginLeft}>Portfolio</a>
+                <a className={`${classes.smallMarginLeft} ${classes.customLinkTag}`}>Portfolio</a>
               </div>
 
               <div className={classes.underline} />
@@ -135,7 +146,7 @@ function Sidebar(props) {
             <div>
               <div className={classes.section}>
                 <PersonIcon />
-                <a className={classes.smallMarginLeft}>About</a>
+                <a className={`${classes.smallMarginLeft} ${classes.customLinkTag}`}>About</a>
               </div>
               <div className={classes.underline} />
             </div>
@@ -146,7 +157,7 @@ function Sidebar(props) {
             <div>
               <div className={classes.section}>
                 <PermPhoneMsgIcon />
-                <a className={classes.smallMarginLeft}>Contact</a>
+                <a className={`${classes.smallMarginLeft} ${classes.customLinkTag}`}>Contact</a>
               </div>
               <div className={classes.underline} />
             </div>
