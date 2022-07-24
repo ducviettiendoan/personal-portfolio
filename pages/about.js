@@ -226,18 +226,19 @@ export default function About() {
                     <div>Solution Engineering</div>
                     <div>Reston, Virginia</div>
                     <div className={classes.paragraphSpace}>
-                      Benit mission is to escort all IT learners in education and employment in Australia, the USA, 
-                      and other countries. We assist our members in career orientation, skills training, and enhancement 
-                      as well as expanding their professional social circles.
+                      ScienceLogic is a leader in ITOM & AIOps, providing modern IT operations with actionable insights to 
+                      predict & resolve problems faster in a digital, ephemeral world. One of our most unique platform is SL1. Customers see 
+                      everything across multi-cloud and distributed architectures, contextualize data through relationship mapping, and act on this 
+                      insight through integration and automation.
                     </div>
                     <div>
-                      My experience with Benit showed me the power of self-learning and team-work. 
-                      By completed a Codecademy Full-stack engineer certificate, I was able to gradually join 
-                      in some team projects (mainly commercial projects). While working with the team, I improved my 
-                      programing skill and gained a lot of experience from knowledge to tips. With the help of my teammates
-                      and my mentor, I built several front-end pages with React, Redux and also experienced NodeJs, Express,
-                      and Java SpringBoot. Furthermore, I was trained to work with Git and some fundametal commands to manage
-                      the team project.
+                      Having an internship opportunity with ScienceLogic in 2022 summer is a turning point in my Software Enginnering journey.
+                      As a first intern in the United State, I experienced not only new technologies and company released products, but also the 
+                      outstanding working environment and company culture. I joined the Software Engineering Team, spefically the Solution Enginnering 
+                      Team to create a search tool which instantly resolves client's questions related to ScienceLogic powperpack metadata. With the 
+                      help of of my incredible team Solution-Knight and espeacially my two mentors, I was able to achieve the first 2 versions of this
+                      Powerpack Search Tool, fulfilled many testes from developers and QA, and successfully presented my intern project to the whole 
+                      company with high approvals for further development for this tool to become a released tool for ScienceLogic clients.
                     </div>
                 </Grid>
               </Grid>
