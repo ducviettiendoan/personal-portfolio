@@ -205,8 +205,12 @@ export default function ChatApp() {
                         </li>
                         <li>Created Jira Stories based on the progress of the projects.</li>
                         <li>Managed 3 Docker containers for Python Django, Redis cache, and Postgres DB.</li>
-                        <li>Wrote Python Script to implement search tool functionality and collaboated with Solution team 
+                        <li>Wrote Python Script to implement search tool functionality and collaborated with Solution team 
                             to write unit tests.
+                        </li>
+                        <li>Provided manual drop for over powerpack 500 .em7pp files with real time updates on file process status 
+                            and schedule daily automatic pull to process and present the up-to-date metadata of 100 ScienceLogic 
+                            released powerpack files from Artifactory for searching and user reference.
                         </li>
                         <li>Successfully presented and demo PowerPack Search Tool solution in ScienceLogic 2022 Internship Program
                             with high approvals for further development for this tool to become a released tool for ScienceLogic clients.
