@@ -7,6 +7,7 @@ import Image from "next/image";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import portfolio from "../img/portfolio.jpg";
+import metrics from "../img/metrics.png";
 import pteMagic from "../img/pte-magic-preview.png";
 import bidMax from "../img/bid_max_preview.png";
 import posts from "../img/posts.png";
@@ -164,17 +165,31 @@ export default function Home() {
           <Card className={classes.introBox}>
             <div className={classes.introTitle}>I am a dedicated developer</div>
             <div className={classes.introContent}>
-              Worked as a Junior Web Developer with an impressive background of
-              front-end development. Exprienced server side technologies and would
-              love to become a full-stack engineer. Below you'll find a selection
-              of some of my most recent projects that showcase the type
-              of website and web app I work closely with.
+              Worked as a Junior Web Developer and Solution Engineering Intern with an impressive background of
+              front-end development, back-end development, and problem solving skill. I would love to experience and learn
+              much more on this journey to become a Software Engineer. Below you'll find a selection of some of my most recent 
+              projects that showcase the type of website and application I work closely with.
             </div>
           </Card>
           {/* Display Projects */}
           <div className={classes.projectBox}>
             <div className={classes.pjHeader}>My Projects</div>
             <Grid container style={{ display: "flex", justifyContent: "space-between" }}>
+              <Grid item sm={12} md={5} className={classes.cardContainer}>
+                <Card className={classes.pjCard}>
+                  {match && minRangeImg ? <Image src={metrics} alt="scilo_pp_search_tool" className={classes.imagePreviewRange} /> : <Image src={metrics} alt="scilo_pp_search_tool" className={classes.imagePreview} />}
+                  <div className={classes.projectName}>
+                    Scilo PowerPack Search Tool
+                  </div>
+                  <Link href="/Projects/pp-search-tool">
+                    <Button className={classes.viewPjButton}>
+                      <div className={classes.section}>
+                        View Project
+                      </div>
+                    </Button>
+                  </Link>
+                </Card>
+              </Grid>
               <Grid item sm={12} md={5} className={classes.cardContainer}>
                 <Card className={classes.pjCard}>
                   {match && minRangeImg ? <Image src={pteMagic} alt="pte-magic" className={classes.imagePreviewRange} /> : <Image src={pteMagic} alt="pte-magic" className={classes.imagePreview} />}
@@ -187,7 +202,7 @@ export default function Home() {
                         View Project
                       </div>
                     </Button>
-                  </Link>``
+                  </Link>
                 </Card>
               </Grid>
               <Grid item sm={12} md={5} className={classes.cardContainer}>
@@ -221,31 +236,27 @@ export default function Home() {
                 </Card>
               </Grid>
               <Grid item sm={12} md={5} className={classes.cardContainer}>
+                  <Card className={classes.pjCard}>
+                    {match && minRangeImg ? <Image src={chatApp} alt="posts-page" className={classes.imagePreviewRange} /> : <Image src={chatApp} alt="posts-page" className={classes.imagePreview} />}
+                    <div className={classes.projectName}>
+                      A customed chat app 
+                    </div>
+                    <Link href="/Projects/chat-app">
+                      <Button className={classes.viewPjButton}>
+                        <div className={classes.section}>
+                          View Project
+                        </div>
+                      </Button>
+                    </Link>
+                  </Card>
+              </Grid>
+              <Grid item sm={12} md={5} className={classes.cardContainer}>
                 <Card className={classes.pjCard}>
                   {match && minRangeImg ? <Image src={posts} alt="posts-page" className={classes.imagePreviewRange} /> : <Image src={posts} alt="posts-page" className={classes.imagePreview} />}
                   <div className={classes.projectName}>
                     MERN stack personal project - A posts web page
                   </div>
                   <Link href="/Projects/posts">
-                    <Button className={classes.viewPjButton}>
-                      <div className={classes.section}>
-                        View Project
-                      </div>
-                    </Button>
-                  </Link>
-                </Card>
-              </Grid>
-              <Grid item sm={12} md={5} className={classes.cardContainer}>
-                <Card className={classes.pjCard}>
-                  {match && minRangeImg ? <Image src={flaskMvc} alt="posts-page" className={classes.imagePreviewRange} /> : <Image src={flaskMvc} alt="posts-page" className={classes.imagePreview} />}
-                  <div className={classes.projectName}>
-                    <div style={{ marginBottom: "12px" }}>Flask MVC API Testing</div>
-                    <div className={classes.description}>
-                      A simple table using MVC API method to accomplish 4 fundamental HTTP requests.
-                    </div>
-                    <div className={classes.description}>Technologies: Flask HTML and CSS</div>
-                  </div>
-                  <Link href="https://ducdoanflaskmvc.herokuapp.com">
                     <Button className={classes.viewPjButton}>
                       <div className={classes.section}>
                         View Project
@@ -275,20 +286,24 @@ export default function Home() {
                 </Card>
               </Grid>
               <Grid item sm={12} md={5} className={classes.cardContainer}>
-                  <Card className={classes.pjCard}>
-                    {match && minRangeImg ? <Image src={chatApp} alt="posts-page" className={classes.imagePreviewRange} /> : <Image src={chatApp} alt="posts-page" className={classes.imagePreview} />}
-                    <div className={classes.projectName}>
-                      A customed chat app 
+                <Card className={classes.pjCard}>
+                  {match && minRangeImg ? <Image src={flaskMvc} alt="posts-page" className={classes.imagePreviewRange} /> : <Image src={flaskMvc} alt="posts-page" className={classes.imagePreview} />}
+                  <div className={classes.projectName}>
+                    <div style={{ marginBottom: "12px" }}>Flask MVC API Testing</div>
+                    <div className={classes.description}>
+                      A simple table using MVC API method to accomplish 4 fundamental HTTP requests.
                     </div>
-                    <Link href="/Projects/chat-app">
-                      <Button className={classes.viewPjButton}>
-                        <div className={classes.section}>
-                          View Project
-                        </div>
-                      </Button>
-                    </Link>
-                  </Card>
-                </Grid>
+                    <div className={classes.description}>Technologies: Flask HTML and CSS</div>
+                  </div>
+                  <Link href="https://ducdoanflaskmvc.herokuapp.com">
+                    <Button className={classes.viewPjButton}>
+                      <div className={classes.section}>
+                        View Project
+                      </div>
+                    </Button>
+                  </Link>
+                </Card>
+              </Grid>
             </Grid>
           </div>
         </div>
