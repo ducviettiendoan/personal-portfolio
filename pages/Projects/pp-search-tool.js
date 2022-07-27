@@ -194,7 +194,7 @@ export default function ChatApp() {
                         Description
                     </div>
                     <div className={classes.descriptionDetail}>
-                        A search engine tool that resolve instantly ScienceLogic customer and developers questions 
+                        A search engine tool that resolves instantly ScienceLogic customer and developers questions 
                         related to Scilo PowerPack metadata.
                     </div>
                     <div className={classes.sectionTitle}>Role</div>
