@@ -96,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
         cursor: "pointer",
         textDecoration: "underline",
         color: "#0d6efd",
+        margin: "8px 0px",
         "&:hover": {
             color: '#551A8B',
         }
@@ -212,9 +213,9 @@ export default function ChatApp() {
                             and schedule daily automatic pull to process and present the up-to-date metadata of 100 ScienceLogic 
                             released powerpack files from Artifactory for searching and user reference.
                         </li>
-                        <li>Successfully presented and demo PowerPack Search Tool solution in ScienceLogic 2022 Internship Program
-                            with high approvals for further development for this tool to become a released tool for ScienceLogic clients.
-                        </li>
+                        {/* <li>Successfully presented and demo PowerPack Search Tool solution in ScienceLogic 2022 Internship Program showcase
+                            with good perspective for further development for this tool to become a released tool for ScienceLogic clients.
+                        </li> */}
                     </ul>
                     <div className={classes.sectionTitle}>Technologies</div>
                     <ul className={classes.technologyList}>
