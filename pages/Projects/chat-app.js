@@ -23,6 +23,10 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         // padding: theme.spacing(3),
     },
+    mobileContent: {
+        flexGrow: 1,
+        marginTop: "64px",
+    },
     appBar: {
         [theme.breakpoints.up("md")]: {
             width: "80%",
@@ -129,7 +133,7 @@ export default function ChatApp() {
                 mobileOpen={mobileOpen}
                 handleDrawerToggle={handleDrawerToggle}
             />
-            <div className={classes.content}>
+            <div className={match ? classes.mobileContent : classes.content}>
                 
                 {/* {match && <div className={classes.toolbar} />} */}
                 {/* <Image src={chatApp} alt="Mern stack post" style={{ width: "100%" }} /> */}

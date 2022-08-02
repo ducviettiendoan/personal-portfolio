@@ -3,11 +3,11 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Grid from "@material-ui/core/Grid";
 import Image from "next/image";
-import ScrollAnimation from 'react-animate-on-scroll';
 import Aos from "aos";
 import "aos/dist/aos.css";
 import CustomAppbar from '../../../components/CustomAppbar';
 import Sidebar from '../../../components/Sidebar';
+import PPImageDetails from '../../../components/ppImageDetails';
 import pp from "../../../img/pp.png";
 import dll from "../../../img/dll.png";
 import diagram from "../../../img/pp_search_tool_diagram.png";
@@ -16,6 +16,7 @@ import metrics from "../../../img/metrics.png";
 import dropZone from "../../../img/drop-zone.png";
 import dynamicApp from "../../../img/dynamicapp.png";
 import scilo from "../../../img/scilo.png";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -139,6 +140,7 @@ export default function Details() {
   const classes = useStyles();
   const theme = useTheme();
   const match = useMediaQuery("(max-width:959px)");
+  const imgContentOrder = useMediaQuery("(max-width:1279px)");
   const [mobileOpen, setMobileOpen] = React.useState(false);  
   const [open, set] = React.useState(false);
 
@@ -179,12 +181,8 @@ export default function Details() {
                 </Grid>
             </Grid>
             <Grid container className={classes.marginX4}>
-                <Grid item md ={12} lg = {7} className={classes.pictureContainer}>
-                    <ScrollAnimation animateOnce={true} animateIn="fadeInLeft" className={classes.animation}>
-                        <Image src={dropZone} alt="drop-zone" className={`${classes.imageEdit}`} />
-                    </ScrollAnimation>
-                </Grid>
-                <Grid item md = {12} lg={5} className={classes.contentContainer} data-aos="fade-left">
+                {!imgContentOrder && <PPImageDetails img={dropZone}/>}
+                <Grid item md = {12} lg={5} className={classes.contentContainer} data-aos={imgContentOrder ? null : "fade-left"}>
                     <h3>Drop Zone</h3>
                     <div className={classes.paragraphSpace}>
                         This is a DropZone JS also a landing page of the app where you could drop your
@@ -198,10 +196,11 @@ export default function Details() {
                     </div>
                     <div className={classes.paragraphSpace}>After Drop Zone accepts the .em7pp file, users will be automatically redirected to a live log page</div>
                 </Grid>
+                {imgContentOrder && <PPImageDetails img={dropZone}/>}
             </Grid>
 
               <Grid container className={classes.marginX4}>
-                <Grid item md={12} lg={5} className={classes.contentContainer} data-aos="fade-right">
+                <Grid item md={12} lg={5} className={classes.contentContainer} data-aos={imgContentOrder ? null : "fade-right"}>
                     <h3>Django Live Log</h3>
                     <div className={classes.paragraphSpace}>
                         After dropping the file, you will be redirect to a specific live log (or dll) based on
@@ -211,29 +210,22 @@ export default function Details() {
                         successfully loaded, you will be directed to "/metrics" to see your pack data. 
                     </div>
                 </Grid>
-                <Grid item md = {12} lg={7} className={classes.pictureContainer}>
-                  <ScrollAnimation animateOnce={true} animateIn="fadeInRight" className={classes.animation}>
-                    <Image src={dll} alt="live-log" className={classes.imageEdit} />
-                  </ScrollAnimation>
-                </Grid>
+                <PPImageDetails img={dll}/>
               </Grid>
 
               <Grid container className={classes.marginX4}>
-                <Grid item md = {12} lg={7} className={classes.pictureContainer}>
-                  <ScrollAnimation animateOnce={true} animateIn="fadeInLeft" className={classes.animation}>
-                    <Image src={metrics} alt="metrics" className={`${classes.imageEdit} ${classes.scienceLogicImage}`}/>
-                  </ScrollAnimation>
-                </Grid>
-                <Grid item md={12} lg={5} className={classes.contentContainer} data-aos="fade-left">
+                {!imgContentOrder && <PPImageDetails img={metrics}/>}
+                <Grid item md={12} lg={5} className={classes.contentContainer} data-aos={imgContentOrder ? null : "fade-left"}>
                     <h3>Metrics</h3>
                     <div className={classes.paragraphSpace}>
                         From dll, users land to this page and find total of the powerpacks and dynamicapp that is presented in
                         other tables below. This comes directly from our DB with reliable data.
                     </div>
                 </Grid>
+                {imgContentOrder && <PPImageDetails img={metrics}/>}
               </Grid>
               <Grid container className={classes.marginX4}>
-                <Grid item md={12} lg={5} className={classes.contentContainer} data-aos="fade-right">
+                <Grid item md={12} lg={5} className={classes.contentContainer} data-aos={imgContentOrder ? null : "fade-right"}>
                     <h3>Metadata Tables</h3>
                     <div className={classes.paragraphSpace}>
                         In the nav bar, you could find 4 main tables with your pack metadata included. The powerpack
@@ -244,29 +236,22 @@ export default function Details() {
                         and Science Logic libraries used for each dynamic applications of a powerpack.
                     </div>
                 </Grid>
-                <Grid item md = {12} lg={7} className={classes.pictureContainer}>
-                  <ScrollAnimation animateOnce={true} animateIn="fadeInLeft" className={classes.animation}>
-                    <Image src={pp} alt="powerpack" className={`${classes.imageEdit} ${classes.scienceLogicImage}`}/>
-                  </ScrollAnimation>
-                </Grid>
+                <PPImageDetails img={pp}/>
               </Grid>
               <Grid container className={classes.marginX4}> 
-                <Grid item md = {12} lg={7} className={classes.pictureContainer}>
-                  <ScrollAnimation animateOnce={true} animateIn="fadeInLeft" className={classes.animation}>
-                    <Image src={dynamicApp} alt="dynamic-app" className={`${classes.imageEdit} ${classes.scienceLogicImage}`}/>
-                  </ScrollAnimation>
-                </Grid>
-                <Grid item md={12} lg={5} className={classes.contentContainer} data-aos="fade-left">
+                {!imgContentOrder && <PPImageDetails img={dynamicApp}/>}
+                <Grid item md={12} lg={5} className={classes.contentContainer} data-aos={imgContentOrder ? null : "fade-left"}>
                     <h3>Daily automatic pulling</h3>
                     <div style={{fontSize: "16px", fontWeight: "bold", color: "#96999e"}}>Something behind the scence</div>
                     <div className={classes.paragraphSpace}>
-                        In receiving feedback from the Solution Team, especially from PM who deeply understand client's
-                        perpective and needs, we decided to create an automatic pull from Artifactory in which stores all the 
-                        Science Logic released powerpacks everyday for user's reference. We configured this feature along with the
-                        watcher and used REST API method to process all the pulling file and put them to the UI. Therefore, clients whenever use
-                        the tool will be provided with data of all the latest powerpack versions. 
+                        In receiving feedback from the Solution Team, especially from PMs who deeply understand client's
+                        perpective and needs, we decided to create an automatic daily pull from Artifactory in which stores all the 
+                        ScienceLogic released powerpacks for user's reference. We configured this feature along with the
+                        watcher and used REST API method to get the powerpacks, process all the pulling file, and put them to the UI. Therefore, 
+                        clients whenever use the tool will be provided with data of all the latest powerpack versions. 
                     </div>
                 </Grid>
+                {imgContentOrder && <PPImageDetails img={dynamicApp}/>}
               </Grid>
             </div>
             <div>
